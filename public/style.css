@@ -1,0 +1,142 @@
+body{
+    background-color: #282922;
+    color: #c8d66b;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.inputField {
+    padding: 1vw 2.5vw;
+    vertical-align: top;
+    display: inline-block;
+
+}
+
+#inputFields {
+    margin-bottom: 2vw;
+}
+
+select, input[type=number]{
+    border: none;
+    color:#2cc73b;
+    font-size: 1.3em;
+    background-color:#282922;
+    border-bottom: 4px solid #c8d66b;
+    padding-bottom: 3px;
+    transition: 0.25s;
+}
+
+select:focus, input:focus{
+    outline: none;
+    border-bottom: 5px solid #2cc73b
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+.open div {
+    height: 6px;
+    background-color: #c8d66b;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.25s;
+}
+
+.open .two {
+    transition: 0.05s;
+}
+
+.open, .close {
+    width: 30px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 100px;
+    padding-left: 30px;
+    transition: 0.25s;
+}
+
+.open:hover .one{
+    background-color: #c8d66b;
+    border-radius: 2px;
+    height: 6px;
+    margin: 4px 0px;
+    transform: rotate(45deg);
+}
+
+.open:hover .three{
+    height: 6px;
+    background-color: #c8d66b;
+    border-radius: 2px;
+    margin: 4px 0px;
+    transform: translate(0, -10px) rotate(-45deg);
+}
+
+.open:hover .two{
+    height: 0;
+}
+
+.close .one {
+    background-color: #c8d66b;
+    border-radius: 2px;
+    height: 6px;
+    margin: 4px 0px;
+    transform: rotate(45deg);
+    transition: 0.25s;
+}
+
+.close .two {
+    height: 6px;
+    background-color: #c8d66b;
+    border-radius: 2px;
+    margin: 4px 0px;
+    transform: translate(0, -10px) rotate(-45deg);
+    transition: 0.25s;
+}
+
+.close .three {
+    height: 0;
+    transition: 0.05s;
+}
+
+.close:hover div {
+    height: 6px;
+    background-color: #c8d66b;
+    margin: 4px 0;
+    border-radius: 2px;
+    transform: rotate(0);
+}
+
+#graphBorder {
+    outline: 14px solid #282922;
+    outline-offset: -14px;
+}
+
+.sections {
+    margin-top: 50px;
+    width: 80%;
+    display: flex;
+    margin-left: 10%;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+
+.sectionTitle {
+    border-bottom: 6px solid #c8d66b;
+    padding: 5px 0;
+    width: 100%;
+    color: #2cc73b
+}
+
+.sections h2 {
+    margin-left: 40px;
+}
+
+.sections p {
+    margin: 20px 80px;
+}
+
+.sections a {
+    margin: 20px 80px;
+    color: #2cc73b;
+}

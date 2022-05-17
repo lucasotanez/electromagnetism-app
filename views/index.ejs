@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width'>
+        <title>capstone</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script defer src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+        <script defer src="https://d3js.org/d3.v3.min.js"></script>
+        <script defer src='/math.js'></script>
+        
+    </head>
+
+    <body>
+        <!--<h1>Light Modeling</h1>-->
+        <div id = 'inputFields'>
+            <div class='inputField'>
+                <h1>color</h1>
+                <select name='color' id='color'>
+                    <option value='---'>---</option>
+                    <option value='red'>red</option>
+                    <option value='orange'>orange</option>
+                    <option value='yellow'>yellow</option>
+                    <option value='green'>green</option>
+                    <option value='cyan'>cyan</option>
+                    <option value='blue'>blue</option>
+                    <option value='violet'>violet</option>
+                </select>
+            </div>
+            <div class='inputField'>
+                <h1>wavelength</h1>
+                <input placeholder='wavelength' spellcheck='false' type='number' min='0' id='inputWavelength'>
+                <p>nanometers (nm)</p>
+            </div>
+            <div class='inputField'>
+                <h1>frequency</h1>
+                <input placeholder='frequency' spellcheck='false' type='number' min = '0' id='inputFrequency'>
+                <p>hertz (Hz)</p>
+            </div>
+            <div class='inputField'>
+                <h1>energy</h1>
+                <input placeholder='energy' spellcheck='false' type='number' min = '0' id='inputEnergy'>
+                <p>joules (J)</p>
+            </div>
+            <a href="/settings" class="open" id ='toSettings'>
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </a>
+
+        </div>
+        <div id="graphBorder">
+            <div id='graph'></div>
+        </div>
+
+    </body>
+</html>
