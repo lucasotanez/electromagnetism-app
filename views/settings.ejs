@@ -10,6 +10,12 @@
         <script defer src='/math.js'></script>
         <script defer src="/themes.js"></script>
         
+        <style>
+            body {
+                color: <%= c2 %>;
+                background-color:<%= c1 %>;
+            }
+        </style>
     </head>
 
     <body>
@@ -17,7 +23,7 @@
         <div id = 'inputFields'>
             <div class='inputField'>
                 <h1>color</h1>
-                <select name='color' id='color'>
+                <select style="background-color:<%= c1 %>; color:<%= c3 %>; border-color:<%= c3 %>" name='color' id='color'>
                     <option><%= color %></option>
                     <option value='---'>---</option>
                     <option value='red'>red</option>
@@ -32,39 +38,45 @@
             </div>
             <div class='inputField'>
                 <h1>wavelength</h1>
-                <input placeholder='wavelength' spellcheck='false' type='number' min='0' id='inputWavelength' value=<%= wavelength %>>
+                <input style="background-color:<%= c1 %>; color:<%= c3 %>; border-color:<%= c3 %>" placeholder='wavelength' spellcheck='false' type='number' min='0' id='inputWavelength' value=<%= wavelength %>>
                 <p>nanometers (nm)</p>
             </div>
             <div class='inputField'>
                 <h1>frequency</h1>
-                <input placeholder='frequency' spellcheck='false' type='number' min = '0' id='inputFrequency' value=<%= frequency %>>
+                <input style="background-color:<%= c1 %>; color:<%= c3 %>; border-color:<%= c3 %>" placeholder='frequency' spellcheck='false' type='number' min = '0' id='inputFrequency' value=<%= frequency %>>
                 <p>hertz (Hz)</p>
             </div>
             <div class='inputField'>
                 <h1>energy</h1>
-                <input placeholder='energy' spellcheck='false' type='number' min = '0' id='inputEnergy' value=<%= energy %>>
+                <input style="background-color:<%= c1 %>; color:<%= c3 %>; border-color:<%= c3 %>" placeholder='energy' spellcheck='false' type='number' min = '0' id='inputEnergy' value=<%= energy %>>
                 <p>joules (J)</p>
             </div>
             <a href="/" class="close" id='toSettings'> <!--not to settings, but back to index-->
-                <div class="one"></div>
-                <div class="three"></div>
-                <div class="two"></div>
+                <div style='background-color:<%= c2%>' id="one"></div>
+                <div style='background-color:<%= c2%>' id="three"></div>
+                <div style='background-color:<%= c2%>' id="two"></div>
             </a>
         </div>
         <div class="sections">
 
-            <h1 class='sectionTitle'>settings</h1>
+            <h1 style='color:<%= c2 %>; border-color:<%= c3 %>' class='sectionTitle'>settings</h1>
             <h2>theme</h2>
                 <div class="inputField">
-                    <select name="theme" id="themeList">
+                    <select style="background-color:<%= c1 %>; color:<%= c3 %>; border-color:<%= c3 %>" name="theme" id="themeList">
                         <option value="monokai">monokai</option>
                         <option value="light">light</option>
                         <option value="dark">dark</option>
                         <option value="moonlight">moonlight</option>
                         <option value="strawberry">strawberry</option>
+                        <option value="gator">gator</option>
+                        <option value="frutti">frutti</option>
+                        <option value="kelli">kelli</option>
+                        <option value="flesh">flesh</option>
+                        <option value="mainframe">mainframe</option>
+                        <option value="spider">spider</option>
                     </select>
                 </div>
-            <h1 class="sectionTitle">math</h1>
+            <h1 style='color:<%= c2 %>; border-color:<%= c3 %> 'class="sectionTitle">math</h1>
             <h2>formulas</h2>
                 <p>wavelength:  c = λν</p>
                 <p>energy: E = hν</p>
@@ -79,8 +91,8 @@
                 <p>1 kJ = 1000 J</p>
                 <p>1 m = 1e9 nm</p>
             <h2>credit</h2>
-                <a href="https://github.com/lucasotanez">my-github</a>
-                <a href="https://github.com/mauriciopoppe/function-plot">function-plot</a>
+                <a id='link1' style='color:<%= c3 %>' href="https://github.com/lucasotanez">my-github</a>
+                <a id='link2' style='color:<%= c3 %>'href="https://github.com/mauriciopoppe/function-plot">function-plot</a>
         </div>
         
         

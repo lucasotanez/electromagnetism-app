@@ -42,7 +42,7 @@ input[type=number]::-webkit-inner-spin-button {
     transition: 0.25s;
 }
 
-.open .two {
+.open #two {
     transition: 0.05s;
 }
 
@@ -55,7 +55,7 @@ input[type=number]::-webkit-inner-spin-button {
     transition: 0.25s;
 }
 
-.open:hover .one{
+.open:hover #one{
     background-color: #c8d66b;
     border-radius: 2px;
     height: 6px;
@@ -63,7 +63,7 @@ input[type=number]::-webkit-inner-spin-button {
     transform: rotate(45deg);
 }
 
-.open:hover .three{
+.open:hover #three{
     height: 6px;
     background-color: #c8d66b;
     border-radius: 2px;
@@ -71,11 +71,11 @@ input[type=number]::-webkit-inner-spin-button {
     transform: translate(0, -10px) rotate(-45deg);
 }
 
-.open:hover .two{
+.open:hover #two{
     height: 0;
 }
 
-.close .one {
+.close #one {
     background-color: #c8d66b;
     border-radius: 2px;
     height: 6px;
@@ -84,7 +84,7 @@ input[type=number]::-webkit-inner-spin-button {
     transition: 0.25s;
 }
 
-.close .two {
+.close #two {
     height: 6px;
     background-color: #c8d66b;
     border-radius: 2px;
@@ -93,7 +93,7 @@ input[type=number]::-webkit-inner-spin-button {
     transition: 0.25s;
 }
 
-.close .three {
+.close #three {
     height: 0;
     transition: 0.05s;
 }

@@ -11,19 +11,28 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
     res.status(200).set('Content-Type', 'text/html')
-    res.render('index', req.body)
+    let dataAll = {
+        ...data,
+        ...themeData
+    };
+    res.render('index', dataAll)
+    //console.log(themeData)
 })
 
 app.post('/apiIndex', (req, res) => {
     res.status(200).set('Content-Type', 'text/html')
-    console.log(themeData)
-    //res.render('settings', req.body)
+    //console.log(req.body)
+    themeData = req.body
     res.redirect('/')
 })
 
 app.get('/settings', (req, res) => {
     res.status(200).set('Content-Type', 'text/html')
-    res.render('settings', data)
+    let dataAll = {
+        ...data,
+        ...themeData
+    };
+    res.render('settings', dataAll)
 })
 
 app.post('/apiSettings', (req, res) => {

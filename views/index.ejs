@@ -9,6 +9,12 @@
         <script defer src="https://d3js.org/d3.v3.min.js"></script>
         <script defer src='/math.js'></script>
         
+        <style>
+            body {
+                color: <%= c2 %>;
+                background-color: <%= c1 %>;
+            }
+        </style>
     </head>
 
     <body>
@@ -16,7 +22,8 @@
         <div id = 'inputFields'>
             <div class='inputField'>
                 <h1>color</h1>
-                <select name='color' id='color'>
+                <select style="background-color:<%= c1 %>; color:<%= c3 %>; border-color:<%= c3 %>" name='color' id='color' onchange="updateColor()" selected="<%= color %>">
+                    <option><%= color%></option>
                     <option value='---'>---</option>
                     <option value='red'>red</option>
                     <option value='orange'>orange</option>
@@ -29,27 +36,27 @@
             </div>
             <div class='inputField'>
                 <h1>wavelength</h1>
-                <input placeholder='wavelength' spellcheck='false' type='number' min='0' id='inputWavelength'>
+                <input style="background-color:<%= c1 %>; color:<%= c3 %>; border-color:<%= c3 %>" placeholder='wavelength' spellcheck='false' type='number' min='0' id='inputWavelength' value=<%= wavelength%>>
                 <p>nanometers (nm)</p>
             </div>
             <div class='inputField'>
                 <h1>frequency</h1>
-                <input placeholder='frequency' spellcheck='false' type='number' min = '0' id='inputFrequency'>
+                <input style="background-color:<%= c1 %>; color:<%= c3 %>; border-color:<%= c3 %>" placeholder='frequency' spellcheck='false' type='number' min = '0' id='inputFrequency' value=<%= frequency%>>
                 <p>hertz (Hz)</p>
             </div>
             <div class='inputField'>
                 <h1>energy</h1>
-                <input placeholder='energy' spellcheck='false' type='number' min = '0' id='inputEnergy'>
+                <input style="background-color:<%= c1 %>; color:<%= c3 %>; border-color:<%= c3 %>" placeholder='energy' spellcheck='false' type='number' min = '0' id='inputEnergy' value=<%= energy%>>
                 <p>joules (J)</p>
             </div>
             <a href="/settings" class="open" id ='toSettings'>
-                <div class="one"></div>
-                <div class="two"></div>
-                <div class="three"></div>
+                <div style='background-color:<%= c2%>' id="one"></div>
+                <div style='background-color:<%= c2%>' id="two"></div>
+                <div style='background-color:<%= c2%>' id="three"></div>
             </a>
 
         </div>
-        <div id="graphBorder">
+        <div id="graphBorder" style="outline-color:<%= c1 %>">
             <div id='graph'></div>
         </div>
 
