@@ -19,30 +19,29 @@ const inputColor = document.getElementById('color');
 const inputWavelength = document.getElementById('inputWavelength');
 const inputFrequency = document.getElementById('inputFrequency');
 
+var graphOptions = {
+  target: '#graph',
+  width,
+  height,
+  data: [{
+    fn: 0,
+  }],
+  grid: false,
+  title: '',
+  yAxis: {domain: [-1, 1]},
+  xAxis: {domain: [0, 700]}
+}
+
 setInterval(function(){ //animation start
   rollNum += 1;
   rollNumStr = rollNum.toString();
   freqNumStr = freqNum.toString();
   function1 = 'sin' + '(' + freqNumStr + '(x+' + rollNumStr + '))';
-  //console.log(function1);
-  functionPlot({
-    target: '#graph',
-    width,
-    height,
-    data: [{
-      fn: function1,
-      color: color1,
-      //derivative: {
-      //  fn: 'cos(x)',
-      //  color: 'green',
-      //  updateOnMouseMove: true
-      //}
-    }],
-    grid: false,
-    title: '',
-    yAxis: {domain: [-1, 1]},
-    xAxis: {domain: [0, 700]}
-  }); //animation end
+  graphOptions.data[0] = {
+    fn: function1,
+    color: color1
+  }
+  functionPlot(graphOptions)
 }, 10);
 
 const varToSettings = document.getElementById('toSettings');
